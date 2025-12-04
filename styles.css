@@ -17,11 +17,6 @@ body {
   margin: 0;
 }
 
-/* Background image on the page (uses your existing headshot).
-   Because it's small and in the top right, it won't hurt readability. */
-body {
-}
-
 /* Grouped selector example: these three share layout styles */
 header,
 main,
@@ -36,8 +31,16 @@ footer {
    HEADER
    ========= */
 header {
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  /* Nice, subtle background image effect using your headshot */
+  background-image: url("lauren-headshot.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.85);
+  background-blend-mode: lighten;
 }
 
 /* Descendant selector: h1 inside header */
@@ -48,19 +51,18 @@ header h1 {
   margin-bottom: 0.25rem;
 }
 
-/* First line/letter pseudo-elements for the very first paragraph in each section */
-section p:first-of-type::first-line {
-  font-variant: small-caps;
-  letter-spacing: 0.04em;
-}
-
-section p:first-of-type::first-letter {
-  font-size: 130%;
-}
-
 /* Header paragraph text */
 header p {
   margin: 0.1rem 0;
+}
+
+/* Make the headshot image sit nicely under the text */
+header img {
+  display: block;
+  max-width: 320px;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 4px;
 }
 
 /* =========
@@ -91,10 +93,25 @@ h3 {
   color: #1f4a7c;
 }
 
-/* Example of extra text styling properties for A-level */
+/* =========
+   PARAGRAPHS & TYPOGRAPHY
+   ========= */
 p {
   text-indent: 0.4rem;       /* indentation at the start of paragraphs */
   word-spacing: 0.02em;      /* slight extra space between words */
+  line-height: 1.6;          /* comfortable reading */
+}
+
+/* First line/letter pseudo-elements for the very first paragraph in each section */
+section p:first-of-type::first-line {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+section p:first-of-type::first-letter {
+  font-size: 130%;
+  font-weight: bold;
+  color: #1f4a7c;
 }
 
 /* =========
@@ -107,7 +124,7 @@ a:link {
 }
 
 a:visited {
-  color: #5a2e82; /* follows best practice: visited still identifiable */
+  color: #5a2e82; /* visited still identifiable */
 }
 
 a:focus {
