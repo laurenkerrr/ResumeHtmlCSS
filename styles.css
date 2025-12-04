@@ -34,7 +34,7 @@ header {
   padding-top: 2rem;
   padding-bottom: 2rem;
 
-  /* Nice, subtle background image effect using your headshot */
+  /* Soft background image effect behind header */
   background-image: url("lauren-headshot.jpg");
   background-size: cover;
   background-position: center;
@@ -56,7 +56,7 @@ header p {
   margin: 0.1rem 0;
 }
 
-/* Make the headshot image sit nicely under the text */
+/* Headshot image in header */
 header img {
   display: block;
   max-width: 320px;
@@ -102,7 +102,18 @@ p {
   line-height: 1.6;          /* comfortable reading */
 }
 
-/* First line/letter pseudo-elements for the very first paragraph in each section */
+/* Fancy first-line and first-letter only for section intros
+   EXCEPT the Summary paragraph (#summary-text) */
+section p:first-of-type:not(#summary-text)::first-line {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+section p:first-of-type:not(#summary-text)::first-letter {
+  font-size: 130%;
+  font-weight: bold;
+  color: #1f4a7c;
+}
 
 /* =========
    LINKS (WITH PSEUDO-CLASSES)
@@ -145,11 +156,10 @@ section ul li {
   margin-bottom: 0.3rem;
 }
 
-/* SPECIAL: custom image bullets for the Marketing & Advertising list
-   For full A-level points, upload a small image called "bullet.png"
-   (around 16x16) to your repo. */
+/* OPTIONAL: custom bullets for the Marketing & Advertising list
+   (only works if you upload bullet.png to the repo) */
 .skills-list {
-  list-style-image: url("bullet.png");
+  /* list-style-image: url("bullet.png"); */
 }
 
 /* =========
