@@ -1,0 +1,168 @@
+/* =========
+   GLOBAL RESET
+   ========= */
+* {
+  box-sizing: border-box;
+}
+
+/* =========
+   BODY & PAGE BACKGROUND
+   ========= */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif; /* typeface + generic default */
+  font-size: 16px;                                  /* base font size */
+  line-height: 1.6;                                 /* line height for readability */
+  color: #333333;                                   /* body text color */
+  background-color: #f5f7fb;                        /* light page background */
+  margin: 0;
+}
+
+/* Background image on the page (uses your existing headshot).
+   Because it's small and in the top right, it won't hurt readability. */
+body {
+  background-image: url("lauren-headshot.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 160px auto;
+}
+
+/* Grouped selector example: these three share layout styles */
+header,
+main,
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* =========
+   HEADER
+   ========= */
+header {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Descendant selector: h1 inside header */
+header h1 {
+  font-size: 2.4rem;              /* bigger headline size */
+  letter-spacing: 0.06em;         /* extra spacing between letters */
+  text-transform: uppercase;      /* all caps */
+  margin-bottom: 0.25rem;
+}
+
+/* First line/letter pseudo-elements for the very first paragraph in each section */
+section p:first-of-type::first-line {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+section p:first-of-type::first-letter {
+  font-size: 130%;
+}
+
+/* Header paragraph text */
+header p {
+  margin: 0.1rem 0;
+}
+
+/* =========
+   MAIN CONTENT CONTAINER
+   ========= */
+main {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.95); /* RGBA for subtle overlay */
+}
+
+/* =========
+   HEADINGS
+   ========= */
+h2 {
+  font-size: 1.4rem; 
+  margin-top: 1.8rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 2px solid #d9e2ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #16325c;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+  color: #1f4a7c;
+}
+
+/* Example of extra text styling properties for A-level */
+p {
+  text-indent: 0.4rem;       /* indentation at the start of paragraphs */
+  word-spacing: 0.02em;      /* slight extra space between words */
+}
+
+/* =========
+   LINKS (WITH PSEUDO-CLASSES)
+   Order: link, visited, focus, hover, active
+   ========= */
+a:link {
+  color: #004aad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #5a2e82; /* follows best practice: visited still identifiable */
+}
+
+a:focus {
+  outline: 2px dashed #ff9800;
+  outline-offset: 2px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #d32f2f;
+}
+
+/* =========
+   LISTS
+   ========= */
+ul {
+  padding-left: 1.2rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+/* List items inside sections */
+section ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* SPECIAL: custom image bullets for the Marketing & Advertising list
+   For full A-level points, upload a small image called "bullet.png"
+   (around 16x16) to your repo. */
+.skills-list {
+  list-style-image: url("bullet.png");
+}
+
+/* =========
+   SECTION SPACING
+   ========= */
+section {
+  margin-bottom: 1.2rem;
+}
+
+/* =========
+   FOOTER
+   ========= */
+footer {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 0.85rem;
+  color: #555555;
+  text-align: left;
+}
