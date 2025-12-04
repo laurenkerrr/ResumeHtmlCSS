@@ -103,16 +103,6 @@ p {
 }
 
 /* First line/letter pseudo-elements for the very first paragraph in each section */
-section p:first-of-type::first-line {
-  font-variant: small-caps;
-  letter-spacing: 0.04em;
-}
-
-section p:first-of-type::first-letter {
-  font-size: 130%;
-  font-weight: bold;
-  color: #1f4a7c;
-}
 
 /* =========
    LINKS (WITH PSEUDO-CLASSES)
