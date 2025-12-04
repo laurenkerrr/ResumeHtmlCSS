@@ -20,10 +20,6 @@ body {
 /* Background image on the page (uses your existing headshot).
    Because it's small and in the top right, it won't hurt readability. */
 body {
-  background-image: url("lauren-headshot.jpg");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 160px auto;
 }
 
 /* Grouped selector example: these three share layout styles */
