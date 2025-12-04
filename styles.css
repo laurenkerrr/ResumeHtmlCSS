@@ -45,9 +45,9 @@ header {
 
 /* Descendant selector: h1 inside header */
 header h1 {
-  font-size: 2.4rem;              /* bigger headline size */
-  letter-spacing: 0.06em;         /* extra spacing between letters */
-  text-transform: uppercase;      /* all caps */
+  font-size: 2.4rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
 
@@ -56,7 +56,7 @@ header p {
   margin: 0.1rem 0;
 }
 
-/* Headshot image in header */
+/* Headshot image in header (foreground) */
 header img {
   display: block;
   max-width: 320px;
@@ -78,7 +78,7 @@ main {
    HEADINGS
    ========= */
 h2 {
-  font-size: 1.4rem; 
+  font-size: 1.4rem;
   margin-top: 1.8rem;
   margin-bottom: 0.4rem;
   border-bottom: 2px solid #d9e2ff;
@@ -102,8 +102,8 @@ p {
   line-height: 1.6;          /* comfortable reading */
 }
 
-/* Fancy first-line and first-letter only for section intros
-   EXCEPT the Summary paragraph (#summary-text) */
+/* Fancy first-line and first-letter ONLY for first paragraphs in sections,
+   but NOT for the Summary (#summary-text) */
 section p:first-of-type:not(#summary-text)::first-line {
   font-variant: small-caps;
   letter-spacing: 0.04em;
@@ -156,8 +156,7 @@ section ul li {
   margin-bottom: 0.3rem;
 }
 
-/* OPTIONAL: custom bullets for the Marketing & Advertising list
-   (only works if you upload bullet.png to the repo) */
+/* Custom navy circle bullet for Marketing & Advertising list */
 .skills-list {
   list-style-image: url("bullet.png");
 }
