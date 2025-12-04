@@ -159,7 +159,7 @@ section ul li {
 /* OPTIONAL: custom bullets for the Marketing & Advertising list
    (only works if you upload bullet.png to the repo) */
 .skills-list {
-  /* list-style-image: url("bullet.png"); */
+  list-style-image: url("bullet.png");
 }
 
 /* =========
